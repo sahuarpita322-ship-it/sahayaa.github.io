@@ -419,3 +419,25 @@ function showUserMap(lat, lon) {
     </iframe>
   `;
 }
+function sendEmergencySMS() {
+  if (!navigator.geolocation) {
+    alert("Location not supported");
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(pos => {
+    const lat = pos.coords.latitude;
+    const lng = pos.coords.longitude;
+
+    const message =
+      "🚨 EMERGENCY! I need help.\n" +
+      "My live location:\n" +
+      "https://www.google.com/maps?q=" + lat + "," + lng;
+
+    const phone = "108"; // or family number
+
+    // Opens SMS app
+    window.location.href =
+      "sms:" + phone + "?body=" + encodeURIComponent(message);
+  });
+}
