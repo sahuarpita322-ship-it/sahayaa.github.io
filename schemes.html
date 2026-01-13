@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Health Schemes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="health-schemes">
+
+<div class="app">
+  <h1>🏥 Health Schemes</h1>
+
+  <!-- Language Buttons -->
+  <div class="language-buttons">
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('hi')">Hindi</button>
+    <button onclick="setLanguage('or')">Odia</button>
+  </div>
+
+  <!-- Voice Instructions -->
+  <button id="voiceBtn" style="background:#ff9800;color:white;padding:10px;border-radius:5px;margin:10px 0;">
+    🔊 Listen Instructions
+  </button>
+
+  <div id="schemeList"></div>
+
+  <a class="back" href="index.html">⬅ Back to Home</a>
+</div>
+
+<script src="script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    showSchemes(healthSchemes);
+  });
+</script>
+</body>
+</html>

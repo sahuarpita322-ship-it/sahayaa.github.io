@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="manifest" href="manifest.json">
+  <title>Blood Banks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <h1>🩸 Blood Banks</h1>
+  <!-- Language Selection -->
+<div class="language-buttons" style="margin-bottom:15px;">
+  <button onclick="setLanguage('en')">English</button>
+  <button onclick="setLanguage('hi')">Hindi</button>
+  <button onclick="setLanguage('or')">Odia</button>
+</div>
+  <button id="voiceBtn" 
+        style="background:#ff9800;color:white;font-size:18px;padding:10px;border-radius:5px;margin-bottom:10px;">
+  🔊 Listen Instructions
+</button>
+
+  <select id="groupFilter" onchange="filterBlood()">
+  <option value="all">All Blood Groups</option>
+  <option value="A+">A+</option>
+  <option value="A-">A-</option>
+  <option value="B+">B+</option>
+  <option value="B-">B-</option>
+  <option value="O+">O+</option>
+  <option value="O-">O-</option>
+  <option value="AB+">AB+</option>
+  <option value="AB-">AB-</option>
+</select>
+
+  <div id="bloodList"></div>
+
+  <a class="back" href="index.html">⬅ Back to Home</a>
+</div>
+
+<script src="script.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js")
+    .then(() => console.log("Service Worker Registered"))
+    .catch(err => console.log("Service Worker Failed:", err));
+}
+</script>
+</body>
+</html>

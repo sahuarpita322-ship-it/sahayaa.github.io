@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+}
+
+.app {
+  max-width: 420px;
+  margin: auto;
+  padding: 16px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+  font-size: 22px;
+  padding: 18px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #2aaaa3;
+  color: white;
+}
+
+.links a {
+  display: block;
+  padding: 14px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  background: #013b56;
+  color: white;
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: center;
+}
+select {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.back {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #1976d2;
+  font-size: 16px;
+}
+.card p {
+  margin: 6px 0;
+}
+.emergency-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+.emergency-card {
+  padding: 15px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+}
+
+.emergency-card h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.emergency-card p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.emergency-card button {
+  margin-top: 8px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  color: #000;   /* 👈 FIX */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Colors */
+.red { background:#c62828; }
+.blue { background:#1565c0; }
+.orange { background:#ef6c00; }
+.purple { background:#6a1b9a; }
+.green { background:#2e7d32; }
+.teal { background:#00695c; }
+.brown { background:#5d4037; }
+.dark { background:#263238; }
+
+.language-buttons {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.language-buttons button {
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  border: none;
+  background: #c98e4a;
+  cursor: pointer;
+}
+
+.language-buttons button:hover {
+  background: #48b054;
+}
+.lock-btn {
+  background: #444;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  width: 100%;
+}

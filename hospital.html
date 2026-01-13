@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="manifest" href="manifest.json">
+  <title>Hospitals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <h1>🏥 Hospitals</h1>
+  <!-- Language Selection -->
+<div class="language-buttons" style="margin-bottom:15px;">
+  <button onclick="setLanguage('en')">English</button>
+  <button onclick="setLanguage('hi')">Hindi</button>
+  <button onclick="setLanguage('or')">Odia</button>
+</div>
+  <button id="voiceBtn" 
+        style="background:#ff9800;color:white;font-size:18px;padding:10px;border-radius:5px;margin-bottom:10px;">
+  🔊 Listen Instructions
+</button>
+  <iframe 
+  src="https://www.google.com/maps?q=Brahmapur%20Hospitals&output=embed"
+  width="100%" 
+  height="220" 
+  style="border:0; margin-bottom:15px;"
+  allowfullscreen="" 
+  loading="lazy">
+</iframe>
+
+  <select id="typeFilter" onchange="filterHospitals()">
+    <option value="all">All Hospitals</option>
+    <option value="Government">Government</option>
+    <option value="Private">Private</option>
+  </select>
+
+  <div id="hospitalList"></div>
+
+  <a class="back" href="index.html">⬅ Back to Home</a>
+</div>
+
+<script src="script.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js")
+    .then(() => console.log("Service Worker Registered"))
+    .catch(err => console.log("Service Worker Failed:", err));
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="manifest" href="manifest.json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Help – Sahaya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="index.html" style="text-decoration:none;">
+  <button style="
+    margin:10px;
+    padding:10px 15px;
+    font-size:16px;
+    background:#1565c0;
+    color:white;
+    border:none;
+    border-radius:8px;">
+    ⬅ Back to Home
+  </button>
+</a>
+
+  <h1>🚨 Emergency Help Numbers</h1>
+  <!-- Language Selection -->
+<div class="language-buttons" style="margin-bottom:15px;">
+  <button onclick="setLanguage('en')">English</button>
+  <button onclick="setLanguage('hi')">Hindi</button>
+  <button onclick="setLanguage('or')">Odia</button>
+</div>
+  <button id="voiceBtn" 
+        style="background:#ff9800;color:white;font-size:18px;padding:10px;border-radius:5px;margin-bottom:10px;">
+  🔊 Listen Instructions
+</button>
+  <p style="text-align:center;">Tap to call immediately</p>
+
+  <div class="emergency-container">
+
+    <div class="emergency-card red">
+      <h2>🚑 Ambulance</h2>
+      <p>108</p>
+      <button onclick="callNumber('108')">Call Now</button>
+    </div>
+
+    <div class="emergency-card blue">
+      <h2>🚓 Police</h2>
+      <p>100</p>
+      <button onclick="callNumber('100')">Call Now</button>
+    </div>
+
+    <div class="emergency-card orange">
+      <h2>🔥 Fire Brigade</h2>
+      <p>101</p>
+      <button onclick="callNumber('101')">Call Now</button>
+    </div>
+
+    <div class="emergency-card purple">
+      <h2>👩 Women Helpline</h2>
+      <p>181</p>
+      <button onclick="callNumber('181')">Call Now</button>
+    </div>
+
+    <div class="emergency-card green">
+      <h2>👶 Child Helpline</h2>
+      <p>1098</p>
+      <button onclick="callNumber('1098')">Call Now</button>
+    </div>
+
+    <div class="emergency-card teal">
+      <h2>🧠 Mental Health</h2>
+      <p>14416</p>
+      <button onclick="callNumber('14416')">Call Now</button>
+    </div>
+
+    <div class="emergency-card brown">
+      <h2>🆘 Disaster Management</h2>
+      <p>1070</p>
+      <button onclick="callNumber('1070')">Call Now</button>
+    </div>
+
+    <div class="emergency-card dark">
+      <h2>🚨 National Emergency</h2>
+      <p>112</p>
+      <button onclick="callNumber('112')">Call Now</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js")
+    .then(() => console.log("Service Worker Registered"))
+    .catch(err => console.log("Service Worker Failed:", err));
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="manifest" href="manifest.json">
+  <title>Sahaya</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <h1>SAHAYA-Local Help & Emergency Services</h1>
+  <h2>📍 Your Location</h2>
+<div id="userMap" style="margin-bottom:15px;"></div>
+  <!-- Language Selection -->
+<div class="language-buttons" style="margin-bottom:15px;">
+  <button onclick="setLanguage('en')">English</button>
+  <button onclick="setLanguage('hi')">Hindi</button>
+  <button onclick="setLanguage('or')">Odia</button>
+</div>
+  <!-- Voice assistant button -->
+<button id="voiceBtn" style="background:#ff9800;color:white;font-size:18px;padding:10px;border-radius:5px;margin-top:10px;">
+  🔊 Listen Instructions
+</button>
+<button id="childLockBtn" class="lock-btn">
+  🔓 Child Lock OFF
+</button>
+
+  <div class="card emergency">
+    <button onclick="callNumber('108')">🚑 Ambulance</button>
+    <button onclick="callNumber('100')">🚓 Police</button>
+    <button onclick="callNumber('101')">🔥 Fire</button>
+  </div>
+
+  <div class="card links">
+    <a href="blood.html">🩸 Blood Banks</a>
+    <a href="hospital.html">🏥 Hospitals</a>
+    <a href="emergency.html">📞 Emergency Numbers</a>
+    <a href="schemes.html">🏛️ Government Schemes</a>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js")
+    .then(() => console.log("Service Worker Registered"))
+    .catch(err => console.log("Service Worker Failed:", err));
+}
+</script>
+</body>
+</html>
+<a href="emergency.html">
+  <button style="background:#4fd582; color:white; font-size:18px;">
+    🚨 Emergency Help
+  </button>
+</a>
