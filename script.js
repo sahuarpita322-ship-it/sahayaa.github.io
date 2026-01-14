@@ -58,7 +58,7 @@ const hospitals = [
   },
   {
     name: "City Hospital",
-    type: "Private",
+    type: "Government",
     address: "Brahmapur, Odisha",
     hospitalPhone: "06802222222",
     ambulancePhone: "9439001111",
